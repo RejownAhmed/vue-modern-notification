@@ -12,9 +12,7 @@ let colors: Colors = {
     danger: [242,19,93]
 }
 
-
 export function notify(params: NotificationParams) {
-
   let props: any = {};
   props = {...params}
   
@@ -98,40 +96,35 @@ export function notify(params: NotificationParams) {
   return instance.exposed;
 }
 
-export function useNotification(params: NotificationParams = {}) {
+export function useNotification() {
   let instance: any;
 
-  const success = (options: NotificationParams = {}): void => {
-    params = { ...params, ...options };
+  const success = (params: NotificationParams = {}): void => {
     params.color = "success";
 
     instance = notify(params);
   };
 
-  const warning = (options: NotificationParams = {}): void => {
-    params = { ...params, ...options };
+  const warning = (params: NotificationParams = {}): void => {
     params.color = "warning";
 
     instance = notify(params);
   };
 
-  const error = (options: NotificationParams = {}): void => {
-    params = { ...params, ...options };
+  const error = (params: NotificationParams = {}): void => {
     params.color = "danger";
 
     instance = notify(params);
   };
 
   // Others
-  const primary = (options: NotificationParams = {}): void => {
-    params = { ...params, ...options };
+  const primary = (params: NotificationParams = {}): void => {
     params.color = "primary";
 
     instance = notify(params);
   };
 
-  const secondary = (options: NotificationParams = {}): void => {
-    params = { ...params, ...options };
+  const secondary = (params: NotificationParams = {}): void => {
     params.color = "secondary";
 
     instance = notify(params);

@@ -1,8 +1,39 @@
 <template>
   <div class="p-10">
-    <Button color="primary" @click="notify" size="sm">
-      Notify
-    </Button>
+    <div class="flex gap-3 mb-3">
+      <Button color="primary" @click="primary" size="sm">
+        Notify
+      </Button>
+      <Button color="secondary" @click="secondary" size="sm">
+        Notify
+      </Button>
+      <Button color="success" @click="success" size="sm">
+        Notify
+      </Button>
+      <Button color="warning" @click="warning" size="sm">
+        Notify
+      </Button>
+      <Button color="danger" @click="danger" size="sm">
+        Notify
+      </Button>
+    </div>
+    <div class="flex gap-3">
+      <Button color="primary" @click="primaryFlat" size="sm">
+        Notify flat
+      </Button>
+      <Button color="secondary" @click="secondaryFlat" size="sm">
+        Notify flat
+      </Button>
+      <Button color="success" @click="successFlat" size="sm">
+        Notify flat
+      </Button>
+      <Button color="warning" @click="warningFlat" size="sm">
+        Notify flat
+      </Button>
+      <Button color="danger" @click="dangerFlat" size="sm">
+        Notify flat
+      </Button>
+    </div>
   </div>
 </template>
 <script setup>
@@ -13,12 +44,112 @@ import { useNotification } from "@/plugins/notification";
 const showModal = ref(false);
 const toast = useNotification();
 
-const notify = ()=>{
+const primary = ()=>{
+  toast.primary({
+      showProgress: true,
+      duration: false,
+      // flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const secondary = ()=>{
+  toast.secondary({
+      showProgress: true,
+      duration: false,
+      // flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const success = ()=>{
+  toast.success({
+      showProgress: true,
+      duration: false,
+      // flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const danger = ()=>{
+  toast.error({
+      showProgress: true,
+      duration: false,
+      // flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const warning = ()=>{
+  toast.warning({
+      showProgress: true,
+      duration: false,
+      // flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+// Flat noti
+
+const primaryFlat = ()=>{
+  toast.primary({
+      showProgress: true,
+      // duration: false,
+      flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const secondaryFlat = ()=>{
+  toast.secondary({
+      showProgress: true,
+      // duration: false,
+      flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const successFlat = ()=>{
+  toast.success({
+      showProgress: true,
+      // duration: false,
+      flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const dangerFlat = ()=>{
+  toast.error({
+      showProgress: true,
+      // duration: false,
+      flat: true,
+      position: 'top-right',
+      title: 'Documentation Vuesax 4.0+',
+      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+  })
+}
+
+const warningFlat = ()=>{
   toast.warning({
       showProgress: true,
       // duration: false,
-      border: 'danger',
-      // flat: true,
+      flat: true,
       position: 'top-right',
       title: 'Documentation Vuesax 4.0+',
       text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
