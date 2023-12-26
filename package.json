@@ -5,7 +5,9 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/vue-modern-notification.umd.cjs",
   "module": "./dist/vue-modern-notification.js",
   "exports": {
@@ -20,14 +22,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "v-wave": "^2.0.0",
-    "vue": "^3.3.4",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.32",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.3",
     "tailwindcss": "^3.3.7",
-    "vite": "^4.4.0"
+    "v-wave": "^2.0.0",
+    "vite": "^4.4.0",
+    "vite-plugin-css-injected-by-js": "^3.3.1",
+    "vue": "^3.3.4"
   }
 }

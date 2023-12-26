@@ -1597,6 +1597,11 @@ v-wave@^2.0.0:
   dependencies:
     "@nuxt/kit" "^3.8.2"
 
+vite-plugin-css-injected-by-js@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-css-injected-by-js/-/vite-plugin-css-injected-by-js-3.3.1.tgz#26b41f108c5554ee728359bdec01c68c93a48547"
+  integrity sha512-PjM/X45DR3/V1K1fTRs8HtZHEQ55kIfdrn+dzaqNBFrOYO073SeSNCxp4j7gSYhV9NffVHaEnOL4myoko0ePAg==
+
 vite@^4.4.0:
   version "4.5.1"
   resolved "https://registry.npmjs.org/vite/-/vite-4.5.1.tgz"
