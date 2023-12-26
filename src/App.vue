@@ -14,9 +14,10 @@ const showModal = ref(false);
 const toast = useNotification();
 
 const notify = ()=>{
-  toast.primary({
+  toast.warning({
       showProgress: true,
       // duration: false,
+      border: 'danger',
       // flat: true,
       position: 'top-right',
       title: 'Documentation Vuesax 4.0+',
