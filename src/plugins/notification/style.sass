@@ -1,0 +1,304 @@
+// Color Bg: --color-background
+// Color text: --color-text
+// Color border: --color-border
+// For flat noti.. color should be the bg and bg should be the --color-flat-bg
+
+.notification-enter-active
+  transition: all .3s ease .05s, transform .3s ease, margin .25s ease, clip-path 8s ease .8s
+
+// .notification-leave-active
+//   transition: all .25s ease !important
+
+.notification-leave-to
+  max-height: 0px !important
+  // height: 0px !important
+  padding-top: 0px !important
+  padding-bottom: 0px !important
+  margin-top: 0px !important
+  margin-bottom: 0px !important
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0)
+  opacity: 0 !important
+  clip-path: circle(0% at 80% 35%) !important
+  // transform: translate(0,10px) !important
+
+.notification-enter-from
+  transform: translate(25%)
+  clip-path: circle(0% at 80% 35%) !important
+  .notification__content
+    opacity: 0
+    transform: translate(10%)
+.notification-container
+  position: fixed
+  right: 0px
+  bottom: 0px
+  z-index: 200000
+  transition: all 25s ease
+  padding: 10px 0px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  justify-content: flex-end
+  &--top-right
+    bottom: auto
+    top: 0px
+    display: flex
+    flex-direction: column-reverse
+  &--top-center
+    bottom: auto
+    top: 0px
+    display: flex
+    flex-direction: column-reverse
+    left: 50%
+    right: auto
+    transform: translate(-50%)
+    .notification--sticky
+      margin: 3px 20px
+      border-radius: 20px
+      &:last-child
+        border-radius: 0px 0px 20px 20px
+        margin-top: -10px
+    .notification
+      clip-path: circle(120% at 50% 0%)
+      transition: all .25s ease, transform .3s ease, max-height .25s ease, clip-path .5s ease .1s
+      &.notification--border
+        border: 3px solid transparent
+        border-top: 3px solid rgb(var(--color-border)/1)
+    .notification-enter-from
+      transform: translate(0,-25%)
+      clip-path: circle(0% at 50% 0%) !important
+      .notification__content
+        opacity: 0
+        transform: translate(0,-10%)
+  &--bottom-center
+    left: 50%
+    right: auto
+    transform: translate(-50%)
+    .notification--sticky
+      margin: 3px 20px
+      border-radius: 20px
+      &:last-child
+        border-radius: 20px 20px 0px 0px
+        margin-bottom: -10px
+    .notification
+      clip-path: circle(120% at 50% 100%)
+      transition: all .25s ease, transform .3s ease, max-height .25s ease, clip-path .5s ease .1s
+      &.notification--border
+        border: 3px solid transparent
+        border-bottom: 3px solid rgb(var(--color-border)/1)
+    .notification-enter-from
+      transform: translate(0,25%)
+      clip-path: circle(0% at 50% 100%) !important
+      .notification__content
+        opacity: 0
+        transform: translate(0,10%)
+  &--top-left
+    bottom: auto
+    top: 0px
+    left: 0px
+    right: auto
+    display: flex
+    flex-direction: column-reverse
+    align-items: flex-start
+    justify-content: flex-end
+    .notification--sticky
+      margin-left: 0px
+      border-radius: 0px 20px 20px 0px
+    .notification
+      clip-path: circle(145% at 0% 50%)
+      &.notification--border
+        border: 3px solid transparent
+        border-left: 3px solid rgb(var(--color-border)/1)
+    .notification-enter-from
+      transform: translate(-25%)
+      clip-path: circle(0% at 20% 35%) !important
+      .notification__content
+        opacity: 0
+        transform: translate(-10%)
+  &--bottom-left
+    left: 0px
+    right: auto
+    .notification--sticky
+      margin-left: 0px
+      border-radius: 0px 20px 20px 0px
+    .notification
+      clip-path: circle(145% at 0% 50%)
+      &.notification--border
+        border: 3px solid transparent
+        border-left: 3px solid rgb(var(--color-border)/1)
+    .notification-enter-from
+      transform: translate(-25%)
+      clip-path: circle(0% at 20% 35%) !important
+      .notification__content
+        opacity: 0
+        transform: translate(-10%)
+
+.notification
+  position: relative
+  max-width: 340px
+  width: 100%
+  height: auto
+  border-radius: 20px
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0, 0.1)
+  overflow: hidden
+  clip-path: circle(145% at 100% 50%)
+  background: rgb(var(--color-background)/1)
+  color: rgb(var(--color-text)/1)
+  margin: 3px 10px
+  transition: all .25s ease, transform .3s ease .1s, max-height .25s ease, clip-path .5s ease .1s
+  &:hover:not(&--flat)
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0, 0.1)
+    transform: translate(0,3px)
+  &--noPadding
+    padding: 0px !important
+  &.notification--icon
+    padding-left: 50px !important
+  &--width-auto
+    width: auto
+    max-width: none
+  &--width-all
+    max-width: calc(100vw - 50px)
+    width: calc(100vw - 50px)
+  &--square
+    border-radius: 0px !important
+  &--sticky
+    margin-right: 0px
+    margin-bottom: 0px
+    border-radius: 20px 0px 0px 20px
+  &--flat
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0, 0.2)
+    background: #fff
+    color: rgb(var(--color-text)/1)
+    &:hover
+      &::after
+        background: rgb(var(--color-background)/0.15)
+    .notification__progress
+      height: 2px
+      background: rgb(var(--color-background)/1)
+    .notification__close
+      color: rgb(var(--color-text)/1)
+    .notification__content
+      color: rgb(var(--color-text)/1)
+    &.notification--border
+      border: 0px solid transparent
+      border-right: 3px solid rgb(var(--color-border)/1)
+    &:after
+      content: ''
+      background: rgb(var(--color-background)/0.1)
+      width: 100%
+      height: 100%
+      border-radius: inherit
+      position: absolute
+      top: 0px
+      left: 0px
+      z-index: -1
+      transition: all .25s ease
+  &.notification--onClick
+    cursor: pointer
+  &.notification--color:not(.notification--flat)
+    color: #fff
+    .notification__progress
+      background: #fff
+    .notification__close
+      color: #fff
+    .notification__loading
+      &:after
+        border: 2px solid #fff
+        border-top: 2px solid transparent
+        border-left: 2px solid transparent
+        border-right: 2px solid transparent
+      &:before
+        border: 2px dashed #fff
+        border-top: 2px solid transparent
+        border-left: 2px solid transparent
+        border-right: 2px solid transparent
+
+  &.notification--border
+    border: 3px solid transparent
+    border-right: 3px solid rgb(var(--color-border)/1)
+  &__progress
+    width: 0%
+    height: 3px
+    background: rgb(var(--color-text)/1)
+    position: absolute
+    bottom: 0px
+    left: 0px
+    transition: all .25s ease
+  &__close
+    color: rgb(var(--color-text)/1)
+    position: absolute
+    border: 0px
+    background: transparent
+    top: 2px
+    right: 2px
+    transform: scale(.75)
+    padding: 0px
+  &__icon
+    position: absolute
+    top: calc(50% - 22px)
+    background: transparent
+    width: 45px
+    height: 45px
+    left: 2px
+    border-radius: 0px 35% 35% 0px
+    // box-shadow: inherit
+    display: flex
+    align-items: center
+    justify-content: center
+    i
+      font-size: 1.2rem
+  &__content
+    position: relative
+    width: auto
+    height: auto
+    transition: all .25s ease .2s
+    opacity: 1
+    &__text
+      width: 100%
+      p
+        margin: 0px
+        padding: 0px
+        padding-top: 6px
+        font-size: .75rem
+        line-height: 1rem
+    &__header
+      width: 100%
+      margin: 0px
+      padding: 0px
+      h4
+        width: 100%
+        margin: 0px
+        padding: 0px
+        font-size: .9rem
+        line-height: 1.25
+
+@keyframes progressNoti
+  0%
+    width: 0%
+  100%
+    width: 100%
+
+// Responsive ness
+@media (max-width: 600px)
+  .notification-container
+     width: 100%
+     padding: 0px
+  .notification
+    margin: 3px 0px !important
+    border-radius: 0px !important
+    width: 100% !important
+    max-width: 100% !important
+    min-width: 100% !important
+    &:hover
+      transform: translate(0) !important
+    &:last-child
+      margin-bottom: 0px !important
+  .notification-parent
+    padding: 0px
+    width: 100% !important
+    max-width: 100% !important
+    .notification--sticky
+        margin-bottom: 0px !important
+    &.notification-parent--top-center
+      .notification:last-child
+        margin-bottom: 3px
+        margin-top: 0px !important

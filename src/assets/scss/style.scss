@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 26 92 255;
+    --color-secondary: 125 51 255;
+    --color-success: 70 201 58;
+    --color-warning: 255 130 0;
+    --color-danger: 242 19 93;
+    // Others
+    --color-body: 244 247 248; // Body bg
+    --color-card: 255 255 255; // Components bg
+
+  }
+  // Dark mode
+  [theme="dark"] {
+    --color-body: 21 21 23; // Body bg
+    --color-card: 32 32 33; // Components bg
+
+  }
+}
+
+
+/* Components */
+@import "./components/typography.scss";
