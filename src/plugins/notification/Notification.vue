@@ -14,7 +14,6 @@
           'notification--border': props.border,
           'notification--icon': props.icon,
           'notification--onClick': props.onClick,
-          'notification--onClickClose': props.onClickClose,
           'notification--flat': props.flat,
           'notification--sticky': props.sticky,
           'notification--square': props.square,
@@ -50,7 +49,7 @@
         />
       </div>
       <!-- close button -->
-      <button class="notification__close" @click="handleClickClose">
+      <button class="notification__close" @click="close">
         <CloseIcon />
       </button>
       <!-- loadind -->
@@ -85,7 +84,9 @@ const props = defineProps({
         "success",
         "danger",
         "warning",
+        // TODO: Need to add below three colors
         "info",
+        "light",
         "dark"
       ].includes(value),
   },
@@ -100,13 +101,14 @@ const props = defineProps({
         "success",
         "danger",
         "warning",
+         // TODO: Need to add below three colors
         "info",
         "light",
         "dark"
       ].includes(value),
   },
   icon: String,
-  onClickClose: Function,
+  onClose: Function,
   onClick: Function,
   buttonClose: Boolean,
   flat: Boolean,
@@ -115,10 +117,9 @@ const props = defineProps({
   square: Boolean,
   width: String,
   showProgress: Boolean,
-  duration: Number,
-  countProgress: Number,
+  duration: [Number, Boolean],
   noPadding: Boolean,
-  clickClose: Boolean,
+  closeOnClick: Boolean,
   classNotification: String,
 });
 
@@ -158,28 +159,29 @@ const notificationStyleRootVars = computed(() => {
   return rootVars
 });
 // Custom methods
+
+// When the notification is clicked
 const clicked = (evt) => {
+  // Custom on click event
   if (props.onClick) {
     props.onClick(evt);
   }
-  if (props.clickClose) {
+  // Close the notification on click
+  if (props.closeOnClick) {
     close();
-    if (props.onClickClose) {
-      props.onClickClose(evt);
-    }
   }
 };
 
+// Close method
 function close() {
   isVisible.value = false;
+  // Do something custom onClose
+  if (props.onClose) {
+      props.onClose(evt);
+    }
 }
 
-function handleClickClose() {
-  isVisible.value = false;
-}
-
-// 
-
+// Update progress manually
 const changeProgress = (val) => {
     progress.value = val
 }
@@ -221,8 +223,10 @@ function onLeave(el, done) {
 }
 
 // Vue methods
+
+// If show progress is true
 watch(()=> props.showProgress, ()=>{
-  if (props.showProgress && props.duration) {
+  if (props.showProgress && props.duration !== false) {
     intervalProgress.value = setInterval(() => {
       progress.value++
     }, (props.duration / 100))

@@ -19,7 +19,7 @@ export interface NotificationParams {
   icon?: string
   duration?: number | boolean
   onClick?: any
-  onClickClose?: any
+  onClose?: any
   hideCloseButton?: boolean
   flat?: boolean
   onDestroy?: any
@@ -27,10 +27,9 @@ export interface NotificationParams {
   square?: boolean
   width?: string
   loading?: boolean
-  progress?: any
   noPadding?: any
   customComponent?: any
-  clickClose?: boolean
+  closeOnClick?: boolean
   classNotification?: string
   showProgress?: boolean
 }

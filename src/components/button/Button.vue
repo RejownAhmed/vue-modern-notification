@@ -15,7 +15,6 @@
 
 <script setup>
 import { computed } from "vue";
-import { applyOpacity } from "@/helpers/style/color";
 
 const props = defineProps({
   color: {

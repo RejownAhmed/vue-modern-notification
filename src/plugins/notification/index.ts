@@ -20,8 +20,8 @@ export function notify(params: NotificationParams) {
   
   props.duration = 4000;
 
-  if (typeof params.duration !== 'boolean' && typeof params.duration !== 'undefined') {
-    props.duration = Number(params.duration);
+  if (typeof params.duration == 'number' || params.duration === false) {
+    props.duration = params.duration;
   }
 
   if (params.width == "100%" || window.innerWidth < 600) {
@@ -87,7 +87,7 @@ export function notify(params: NotificationParams) {
     // By default duration has value as 3000ms
     // If duration is set to false
     // It means do not close the notification
-    if (params.duration !== false) {
+    if (params.duration) {
       setTimeout(() => {
         // Call the exposed functions/properties
         instance.exposed.close();
