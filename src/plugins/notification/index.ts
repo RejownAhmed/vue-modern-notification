@@ -87,7 +87,7 @@ export function notify(params: NotificationParams) {
     // By default duration has value as 3000ms
     // If duration is set to false
     // It means do not close the notification
-    if (params.duration) {
+    if (props.duration) {
       setTimeout(() => {
         // Call the exposed functions/properties
         instance.exposed.close();

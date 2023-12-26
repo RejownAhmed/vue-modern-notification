@@ -17,7 +17,6 @@ const notify = ()=>{
   toast.primary({
       showProgress: true,
       // duration: false,
-      border: 'warning',
       // flat: true,
       position: 'top-right',
       title: 'Documentation Vuesax 4.0+',
