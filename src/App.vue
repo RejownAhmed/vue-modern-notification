@@ -37,9 +37,10 @@
   </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { h, markRaw, ref } from "vue";
 import Button from "@/components/button/Button.vue";
 import { useNotification } from "@/plugins/notification";
+import { Icon } from "@iconify/vue";
 
 const showModal = ref(false);
 const toast = useNotification();
@@ -49,9 +50,12 @@ const primary = ()=>{
       showProgress: true,
       duration: false,
       // flat: true,
+      icon: h(Icon, {
+        icon: 'fa:home'
+      }),
       position: 'top-right',
-      title: 'Documentation Vuesax 4.0+',
-      text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
+      title: 'Toaster title goes here',
+      text: 'This is a modern vue 3 toaster plugin copied the idea, styles and functionality from VueSax component library. '
   })
 }
 

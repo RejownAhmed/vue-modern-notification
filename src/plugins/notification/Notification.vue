@@ -29,7 +29,11 @@
     >
       <!-- icon -->
       <div class="notification__icon" v-if="props.icon">
-        {{ props.icon }}
+        <component v-if="typeof props.icon == 'object'" :is="props.icon" />
+        <template v-else>
+          <span v-html="props.icon"/>
+
+        </template>
       </div>
       <!-- content -->
       <div class="notification__content">
