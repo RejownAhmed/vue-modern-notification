@@ -3,7 +3,8 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
-    'node_modules/preline/dist/*.js',
+    './docs/.vitepress/**/*.{js,ts,vue}',
+		'./docs/**/*.md',
   ],
   darkMode: ['class', '[theme="dark"]'],
   theme: {
