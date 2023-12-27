@@ -16,6 +16,7 @@ export default defineConfig({
         text: 'Get started',
         items: [
           { text: 'Installation', link: '/views/install.md' },
+          { text: 'Usage guide', link: '/views/usage.md' },
           { text: 'Props', link: '/views/props.md' },
           { text: 'Examples', link: '/views/examples.md' }
         ]

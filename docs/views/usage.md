@@ -1,38 +1,21 @@
 ---
-title: 'Installation'
+title: 'Usage guide'
 outline: deep
 ---
 
-# Get started
-To get started with our plugin/package, first you have to install the package using ``npm`` or ``yarn``.
-Follow along the guide to use it properly in your project.
+# Usage Guide
+Using our plugin is very simple. 😃
 
-## Installation
-### Using npm
+## Using ``useNotification`` helper
+```vue
+<script setup>
+import { useNotification } from 'vue-modern-notification';
 
-```bash
-npm install vue-modern-notification
+const toast = useNotification();
+
+
+</script>
 ```
-
-### Using Yarn
-```bash
-yarn add vue-modern-notification
-```
-
-## Creating the app
-```javascript
-import { createApp } from 'vue';
-import App from "@/App.vue";
-import VueModernNotification from 'vue-modern-notification';
-// ... other imports
-
-const app = createApp()
-
-app.use(VueModernNotification);
-    .mount("#app")
-
-```
-
 ## Configuration
 Currently, we only support the customization of default colors to match your projects theme. Feel free to give a **pool request** with new customization abilities. 😃
 
