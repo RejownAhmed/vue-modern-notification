@@ -27,7 +27,7 @@ const primary = ()=>{
     title: "Title goes here",
     text: "Description goes here",
     //... other props 
-    // (See the props page for available props that you can pass)
+    // (See the props page for available props)
   })
 }
 
@@ -63,7 +63,7 @@ const primary = ()=>{
     title: "Title goes here",
     text: "Description goes here",
     //... other props 
-    // (See the props page for available props that you can pass)
+    // (See the props page for available props)
   })
 }
 // ... Others
