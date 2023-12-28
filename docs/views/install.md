@@ -43,9 +43,11 @@ Currently, we only support the customization of default colors to match your pro
 - <div class="flex gap-3">Warning <span class="bg-warning w-[25px] h-[25px] rounded"></span></div>
 - <div class="flex gap-3">Danger <span class="bg-danger w-[25px] h-[25px] rounded"></span></div>
 
+:::tip
+Put the RGB numerical color values as an array. 
 
-**Note:-** Put the RGB numerical color values as an array. 
-- For example: ``rgb(255, 255, 255)`` would be ``[255,255,255]``
+For example: ``rgb(255, 255, 255)`` would be ``[255,255,255]``
+:::
 
 ```javascript
 // Config
