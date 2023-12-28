@@ -38,7 +38,6 @@ export interface NotificationParams {
   sticky?: boolean
   square?: boolean
   width?: string
-  loading?: boolean
   noPadding?: boolean
   customComponent?: any
   closeOnClick?: boolean
