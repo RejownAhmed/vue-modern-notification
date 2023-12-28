@@ -34,9 +34,9 @@ app.use(VueModernNotification);
 ```
 
 ## Configuration
-Currently, we only support the customization of default colors to match your projects theme. Feel free to give a **pool request** with new customization abilities. 😃
+We support default configuration setup on the fly. Check below for available options.
 
-### Default colors
+- ### Default colors
 - <div class="flex gap-3">Primary <span class="bg-primary w-[25px] h-[25px] rounded"></span></div>
 - <div class="flex gap-3">Secondary <span class="bg-secondary w-[25px] h-[25px] rounded"></span></div>
 - <div class="flex gap-3">Success <span class="bg-success w-[25px] h-[25px] rounded"></span></div>
@@ -56,9 +56,74 @@ const config = {
     primary: [26,92,255],
     // ....
     danger: [242,19,93] // Used for error toaster
-  }
+  },
+  border: 'primary' // 'primary'|'secondary'|'success'|'warning'|'danger'
 }
 
 app.use(VueModernNotification, config)
   .mount("#app")
+```
+
+- ### Position
+```javascript
+const config = {
+  //...
+  position: 'top-center'
+}
+```
+
+- ### Duration
+```javascript
+const config = {
+  //...
+  duration: 5000, // You can also pass `false` disable auto close
+}
+```
+
+- ### Flat
+```javascript
+const config = {
+  //...
+  flat: true,
+}
+```
+
+- ### Sticky
+```javascript
+const config = {
+  //...
+  sticky: true,
+}
+```
+
+- ### Square
+```javascript
+const config = {
+  //...
+  square: true,
+}
+```
+
+- ### Width
+```javascript
+const config = {
+  //...
+  width: 'auto', // any percent amount. E.g: '100%'
+}
+```
+
+- ### Show/Hide progress bar
+```javascript
+const config = {
+  //...
+  showProgress: false,
+}
+```
+
+- ### Padding
+```javascript
+const config = {
+  //...
+  noPadding: true,
+}
 ```
