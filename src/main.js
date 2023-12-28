@@ -15,6 +15,9 @@ const notificationConfig = {
   // colors: {
   //   primary: [26, 92, 255]
   // }
+  showProgress: true,
+  duration: 10000,
+  flat: true
 }
 
 app

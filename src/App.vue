@@ -47,13 +47,12 @@ const toast = useNotification();
 
 const primary = ()=>{
   toast.primary({
-      showProgress: true,
-      duration: false,
-      // flat: true,
+      // showProgress: true,
+      // duration: false,
+      flat: false,
       icon: h(Icon, {
         icon: 'fa:home'
       }),
-      position: 'top-right',
       title: 'Toaster title goes here',
       text: 'This is a modern vue 3 toaster plugin copied the idea, styles and functionality from VueSax component library. '
   })

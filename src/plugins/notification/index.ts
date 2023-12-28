@@ -2,43 +2,71 @@ import { render, h } from "vue";
 import './icons/style.sass';
 import './style.sass';
 import Notification from "./Notification.vue";
-import { Colors, Configuration,  NotificationParams } from "./types"
+import { Colors, Configuration,  NotificationParams } from "./types.d"
 
-let colors: Colors = {
-    primary: [26,92,255],
-    secondary: [125,51,255],
-    success: [70,201,58],
-    warning: [255,130,0],
-    danger: [242,19,93]
+const options = {
+  colors: {
+      primary: [26,92,255],
+      secondary: [125,51,255],
+      success: [70,201,58],
+      warning: [255,130,0],
+      danger: [242,19,93]
+  },
+  position: 'top-right',
+  duration: 4000,
+  flat: false,
+  sticky: false,
+  square: false,
+  width: null,
+  showProgress: false,
+  noPadding: false,
 }
 
 export function notify(params: NotificationParams) {
-  let props: any = {};
+  let props: any = {}
   props = {...params}
-  
-  props.duration = 4000;
 
-  if (typeof params.duration == 'number' || params.duration === false) {
-    props.duration = params.duration;
-  }
+  // Set default options
+  if (typeof params.duration == 'number' || params.duration === false)
+    props.duration = params.duration
+  else
+    props.duration = options.duration
+
+  if (typeof params.flat !== 'boolean')
+    props.flat = options.flat
+
+
+  if (typeof params.sticky !== 'boolean')
+    props.sticky = options.sticky
+
+  if (typeof params.square !== 'boolean')
+    props.square = options.square
+
+  if (typeof params.noPadding !== 'boolean')
+    props.noPadding = options.noPadding
+
+  if (typeof params.showProgress !== 'boolean')
+    props.showProgress = options.showProgress
+
+  if (typeof params.width !== 'string')
+    props.width = options.width
 
   if (params.width == "100%" || window.innerWidth < 600) {
-
     if (params.position === "top-left" || params.position === "top-right") {
-      params.position = "top-center";
+      params.position = "top-center"
     } else if (
       params.position === "bottom-left" ||
       params.position === "bottom-right" ||
       !params.position
     ) {
-      params.position = "bottom-center";
+      params.position = "bottom-center"
     }
   }
 
-  if (typeof params.position !== "string") {
-    params.position = "bottom-right";
-  }
+  if (typeof params.position !== "string")
+    params.position = options.position
 
+  // Get or Create all notifications container
   const container: HTMLDivElement = document.querySelector(
       `.notification-container--${params.position || "bottom-right"}`
     ) || document.createElement("div");
@@ -56,13 +84,15 @@ export function notify(params: NotificationParams) {
     document.body.appendChild(container); // Append the container to the
   }
   
-  // Create a div element
+  // Create the wrapper for the notification
   const div: HTMLDivElement = document.createElement("div");
   div.style.width = '100%';
 
   if (params.classNotification) {
     div.classList.add(params.classNotification);
   }
+
+  const colors = options.colors;
 
   // Set default color variables for the notification
   Object.keys(colors).forEach(color => {
@@ -145,10 +175,35 @@ export function useNotification() {
 export default {
   install: (app: any, config: Configuration = {})=>{
     // Override default colors
-    if (config.colors) {
-      colors = {...colors, ...config.colors}
-      
-    }
+    if (config.colors)
+      options.colors = {...options.colors, ...config.colors}
+
+    if (config.position) 
+      options.position = config.position
+
+    if (config.border)
+      options.border = config.border
+ 
+    if (typeof config.duration == 'number' || config.duration === false)
+      options.duration = config.duration
+
+    if (config.flat)
+      options.flat = config.flat
+
+    if (config.sticky)
+      options.sticky = config.sticky
+
+    if (config.square)
+      options.square = config.square
+
+    if (config.width)
+      options.width = config.width
+
+    if (config.noPadding)
+      options.noPadding = config.noPadding
+
+    if (config.showProgress)
+      options.showProgress = config.showProgress
 
   }
 }

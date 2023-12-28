@@ -24,7 +24,7 @@
         `notification--${props.color}`,
         props.classNotification,
       ]"
-      :style="{ ...notificationStyleRootVars }"
+      :style="{ ...notificationStyleRootVars, width: props.width }"
       @click="clicked"
     >
       <!-- icon -->
@@ -111,7 +111,7 @@ const props = defineProps({
         "dark"
       ].includes(value),
   },
-  icon: String,
+  icon: [String, Object],
   onClose: Function,
   onClick: Function,
   buttonClose: Boolean,

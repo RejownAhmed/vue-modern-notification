@@ -1,4 +1,5 @@
-export type color = "primary" | "secondary" | "success" | "warning" | "danger" | "light" | "dark" | "info";
+export type Color = "primary" | "secondary" | "success" | "warning" | "danger" | "light" | "dark" | "info";
+export type Position = "top-right" | "top-center" | "top-left" | "bottom-left" | "bottom-center" | "bottom-right";
 
 export interface Colors {
   primary?: [number, number, number]
@@ -10,11 +11,8 @@ export interface Colors {
 
 export interface Configuration {
   colors?: Colors
-  position?: string
-  border?: {
-    borderWidth?: string
-    color?: color
-  }
+  position?: Position
+  border?: Color
   duration?: boolean|number
   flat?: boolean
   sticky?: boolean
