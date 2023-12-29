@@ -28,7 +28,7 @@ export interface NotificationParams {
   position?: string
   color?: color
   border?: string
-  icon?: string
+  icon?: string|object
   duration?: number | boolean
   onClick?: Function
   onClose?: Function
@@ -38,7 +38,7 @@ export interface NotificationParams {
   square?: boolean
   width?: string
   noPadding?: boolean
-  customComponent?: any
+  customComponent?: object
   closeOnClick?: boolean
   classNotification?: string
   showProgress?: boolean

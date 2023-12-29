@@ -2282,6 +2282,14 @@ vue-modern-notification@^1.0.2:
     vitepress-plugin-tabs "^0.5.0"
     vue-modern-notification "^1.0.1"
 
+vue-modern-notification@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.5.tgz#713b074b03d4cccd4da616704a9197f4095acde8"
+  integrity sha512-YkgkCTIpGXuqbUIQAM3HNN9S3n/zArCgZ3TYWwhNjl4K1zj6xYhh+EuRmtTUoq92DuE6sN5qQRWt+PIeZqwSDQ==
+  dependencies:
+    vitepress-plugin-tabs "^0.5.0"
+    vue-modern-notification "^1.0.2"
+
 vue@^3.3.4:
   version "3.3.12"
   resolved "https://registry.npmjs.org/vue/-/vue-3.3.12.tgz"

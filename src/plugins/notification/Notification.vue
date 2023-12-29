@@ -56,9 +56,7 @@ import { ref, watch, computed, onMounted, onBeforeUnmount } from "vue";
 import CloseIcon from "./icons/closeIcon.vue";
 
 const props = defineProps({
-  customComponent: {
-    // Any type
-  },
+  customComponent: Object,
   title: String,
   text: String,
   color: {
