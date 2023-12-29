@@ -40,6 +40,6 @@
   },
   "dependencies": {
     "vitepress-plugin-tabs": "^0.5.0",
-    "vue-modern-notification": "^1.0.5"
+    "vue-modern-notification": "^1.0.6"
   }
 }
