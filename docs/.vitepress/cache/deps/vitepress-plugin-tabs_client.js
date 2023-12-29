@@ -1,7 +1,7 @@
 import {
   reactive,
   watch
-} from "./chunk-ZBR2ML67.js";
+} from "./chunk-DZXPXYRK.js";
 
 // node_modules/vitepress-plugin-tabs/src/client/index.ts
 import PluginTabs from "/home/rejownahmed/Applications/Web Development/publicGitRepositories/vue-modern-notification/node_modules/vitepress-plugin-tabs/src/client/PluginTabs.vue";
