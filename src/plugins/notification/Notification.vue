@@ -1,37 +1,26 @@
 <template>
-  <Transition
-    name="notification"
-    @before-enter="onBeforeEnter"
-    @enter="onEnter"
-    @leave="onLeave"
-  >
-    <div
-      v-if="isVisible"
-      class="notification"
-      :class="[
-        {
-          'notification--color': props.color,
-          'notification--border': props.border,
-          'notification--icon': props.icon,
-          'notification--onClick': props.onClick,
-          'notification--flat': props.flat,
-          'notification--sticky': props.sticky,
-          'notification--square': props.square,
-          'notification--width-all': props.width == '100%',
-          'notification--width-auto': props.width == 'auto',
-          'notification--noPadding': props.noPadding,
-        },
-        `notification--${props.color}`,
-        props.classNotification,
-      ]"
-      :style="{ ...notificationStyleRootVars, width: props.width }"
-      @click="clicked"
-    >
+  <Transition name="notification" @before-enter="onBeforeEnter" @enter="onEnter" @leave="onLeave">
+    <div v-if="isVisible" class="notification" :class="[
+      {
+        'notification--color': props.color,
+        'notification--border': props.border,
+        'notification--icon': props.icon,
+        'notification--onClick': props.onClick,
+        'notification--flat': props.flat,
+        'notification--sticky': props.sticky,
+        'notification--square': props.square,
+        'notification--width-all': props.width == '100%',
+        'notification--width-auto': props.width == 'auto',
+        'notification--noPadding': props.noPadding,
+      },
+      `notification--${props.color}`,
+      props.classNotification,
+    ]" :style="{ ...notificationStyleRootVars, width: props.width }" @click="clicked">
       <!-- icon -->
       <div class="notification__icon" v-if="props.icon">
         <component v-if="typeof props.icon == 'object'" :is="props.icon" />
         <template v-else>
-          <span v-html="props.icon"/>
+          <span v-html="props.icon" />
 
         </template>
       </div>
@@ -47,10 +36,7 @@
             {{ props.text }}
           </p>
         </div>
-        <component 
-          v-if="customComponent" 
-          :is="props.customComponent" 
-        />
+        <component v-if="customComponent" :is="props.customComponent" />
       </div>
       <!-- close button -->
       <button class="notification__close" @click="close">
@@ -59,12 +45,9 @@
       <!-- loadind -->
       <div class="notification__loading" v-if="props.loading" />
       <!-- progress -->
-      <div
-        class="notification__progress"
-        :style="{
-          width: `${progress}%`,
-        }"
-      />
+      <div class="notification__progress" :style="{
+        width: `${progress}%`,
+      }" />
     </div>
   </Transition>
 </template>
@@ -88,10 +71,10 @@ const props = defineProps({
         "success",
         "danger",
         "warning",
-        // TODO: Need to add below three colors
-        "info",
+        "dark",
         "light",
-        "dark"
+        // TODO: Need to add below three colors
+        "info"
       ].includes(value),
   },
   colorName: String,
@@ -105,10 +88,10 @@ const props = defineProps({
         "success",
         "danger",
         "warning",
-         // TODO: Need to add below three colors
-        "info",
+        "dark",
         "light",
-        "dark"
+        // TODO: Need to add below three colors
+        "info"
       ].includes(value),
   },
   icon: [String, Object],
@@ -137,25 +120,29 @@ const notificationStyleRootVars = computed(() => {
   const rootVars = {};
 
   if (isVisible.value) {
-    if (props.color){ 
-      rootVars["--color-text"] = `255 255 255`;
+    if (props.color) {
       rootVars["--color-background"] = `var(--color-${props.color})`;
-      
-      if (props.flat) {
+
+      if (props.color === 'light') {
+        rootVars["--color-text"] = `var(--color-dark)`;
+      } else {
+        rootVars["--color-text"] = `var(--color-light)`;
+      }
+      if (props.flat && props.color !== 'light') {
         rootVars["--color-text"] = `var(--color-${props.color})`;
-        
+
       }
 
     } else {
-      rootVars["--color-text"] = `32 32 33`;
-      rootVars["--color-background"] = `255 255 255`;
+      rootVars["--color-text"] = `var(--color-dark)`;
+      rootVars["--color-background"] = `var(--color-light)`;
     }
     // TODO: Update below code and make classes for individual border type
     // E.g:- border--primary
-    if (typeof props.border !== 'boolean'){
+    if (typeof props.border !== 'boolean') {
       rootVars["--color-border"] = `var(--color-${props.border})`;
-    } else if (props.border){
-      rootVars["--color-border"] = `32 32 33`;
+    } else if (props.border) {
+      rootVars["--color-border"] = `var(--color-dark)`;
 
     }
   }
@@ -181,13 +168,13 @@ function close() {
   isVisible.value = false;
   // Do something custom onClose
   if (props.onClose) {
-      props.onClose(evt);
-    }
+    props.onClose(evt);
+  }
 }
 
 // Update progress manually
 const changeProgress = (val) => {
-    progress.value = val
+  progress.value = val
 }
 
 // Transition hookes
@@ -229,23 +216,23 @@ function onLeave(el, done) {
 // Vue methods
 
 // If show progress is true
-watch(()=> props.showProgress, ()=>{
+watch(() => props.showProgress, () => {
   if (props.showProgress && props.duration !== false) {
     intervalProgress.value = setInterval(() => {
       progress.value++
     }, (props.duration / 100))
   }
 
-}, {immediate: true})
+}, { immediate: true })
 
 
-onMounted(()=>{
-    isVisible.value = true;
-  })
+onMounted(() => {
+  isVisible.value = true;
+})
 
-  onBeforeUnmount(()=>{
-    clearInterval(intervalProgress.value)
-  })
+onBeforeUnmount(() => {
+  clearInterval(intervalProgress.value)
+})
 
 defineExpose({
   close,

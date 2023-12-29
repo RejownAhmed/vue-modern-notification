@@ -194,23 +194,6 @@
       transition: all .25s ease
   &.notification--onClick
     cursor: pointer
-  &.notification--color:not(.notification--flat)
-    color: #fff
-    .notification__progress
-      background: #fff
-    .notification__close
-      color: #fff
-    .notification__loading
-      &:after
-        border: 2px solid #fff
-        border-top: 2px solid transparent
-        border-left: 2px solid transparent
-        border-right: 2px solid transparent
-      &:before
-        border: 2px dashed #fff
-        border-top: 2px solid transparent
-        border-left: 2px solid transparent
-        border-right: 2px solid transparent
 
   &.notification--border
     border: 0px
@@ -270,6 +253,7 @@
         padding: 0px
         font-size: .9rem
         line-height: 1.25
+        font-weight: 500
 
 @keyframes progressNoti
   0%

@@ -10,7 +10,10 @@ const options = {
       secondary: [125,51,255],
       success: [70,201,58],
       warning: [255,130,0],
-      danger: [242,19,93]
+      danger: [242,19,93],
+      dark: [30,30,30],
+      light: [255,255,255],
+      info: [23,162,184],
   },
   position: 'top-right',
   duration: 4000,
@@ -160,12 +163,33 @@ export function useNotification() {
     instance = notify(params);
   };
 
+  const dark = (params: NotificationParams = {}): void => {
+    params.color = "dark";
+
+    instance = notify(params);
+  };
+
+  const light = (params: NotificationParams = {}): void => {
+    params.color = "light";
+
+    instance = notify(params);
+  };
+
+  const info = (params: NotificationParams = {}): void => {
+    params.color = "info";
+
+    instance = notify(params);
+  };
+
   return {
     primary, // Call methods
     secondary, // Call methods
     success, // Call methods
     warning, // Call methods
     error, // Call methods
+    dark, // Call methods
+    light, // Call methods
+    info, // Call methods
     // Return exposed functions/properties so that they can be called manually
     // Exposed functions are defined in the notification component
     instance,
