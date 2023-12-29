@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -26,5 +27,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/RejownAhmed/vue-modern-notification' }
     ]
+  },
+  markdown: {
+    config(md) {
+      md.use(tabsMarkdownPlugin)
+    }
   }
 })

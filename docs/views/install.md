@@ -43,7 +43,7 @@ We support default configuration setup on the fly. Check below for available opt
 - <div class="flex gap-3">Warning <span class="bg-warning w-[25px] h-[25px] rounded"></span></div>
 - <div class="flex gap-3">Danger <span class="bg-danger w-[25px] h-[25px] rounded"></span></div>
 
-:::tip
+:::warning NOTE
 Put the RGB numerical color values as an array. 
 
 For example: ``rgb(255, 255, 255)`` would be ``[255,255,255]``

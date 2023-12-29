@@ -30,11 +30,10 @@ export interface NotificationParams {
   border?: string
   icon?: string
   duration?: number | boolean
-  onClick?: any
-  onClose?: any
+  onClick?: Function
+  onClose?: Function
   hideCloseButton?: boolean
   flat?: boolean
-  onDestroy?: any
   sticky?: boolean
   square?: boolean
   width?: string

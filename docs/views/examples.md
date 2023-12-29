@@ -1,59 +1,18 @@
-# Notification
+<script setup>
+import Default from "../components/examples/default.vue";
 
-<card>
+</script>
+
+# Notification
 
 ## Default
 
-<docs-warn />
-
-It generates a notification with the vuesax function (`$vs.notification`), to use the instance of the notification it is necessary to save it in a variable, for example if you need to close the notification manually or do other functionalities with the instance
-
-:::tip
-  The necessary properties are the `title` and the` text` or failing the `content` property
+:::tabs
+== Preview
+<Default />
+== Code
+<<< @/components/examples/default.vue{vue}
 :::
-
-<div slot="example">
-  <Notification-default />
-</div>
-
-<div slot="template">
-
-  ```html{4}
-    <template>
-      <div class="center">
-        <vs-button
-          @click="openNotification">
-          Open Notification
-        </vs-button>
-      </div>
-    </template>
-  ```
-
-</div>
-
-<div slot="script">
-
-  ```html{5,6,7,8}
-    <script>
-      export default {
-        methods: {
-          openNotification() {
-            this.$vs.notification({
-              title: 'Documentation Vuesax 4.0+',
-              text: `These documents refer to the latest version of vuesax (4.0+),
-              to see the documents of the previous versions you can do it here 👉 Vuesax3.x`
-            })
-          }
-        }
-      }
-    </script>
-  ```
-
-</div>
-
-</card>
-
-<card>
 
 ## Position
 
@@ -68,86 +27,12 @@ supported values
 - `bottom-left`
 - `bottom-center`
 
-<div slot="example">
-  <Notification-position />
-</div>
-
-<div slot="template">
-
-  ```html{3}
-    <template>
-      <div class="center">
-        <vs-button border icon @click="openNotification">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-        <vs-button border icon @click="openNotification('top-right')">
-          <i class='bx bx-border-radius t-r'></i>
-        </vs-button>
-        <vs-button border icon @click="openNotification('top-left')">
-          <i class='bx bx-border-radius t-l'></i>
-        </vs-button>
-        <vs-button border icon @click="openNotification('bottom-left')">
-          <i class='bx bx-border-radius b-l'></i>
-        </vs-button>
-        <vs-button border icon @click="openNotification('bottom-center')">
-          <i class='bx bx-border-bottom' ></i>
-        </vs-button>
-        <vs-button border icon @click="openNotification('top-center')">
-          <i class='bx bx-border-top' ></i>
-        </vs-button>
-      </div>
-    </template>
-  ```
-
-</div>
-
-<div slot="script">
-
-  ```html{5,6,7,8,9}
-    <script>
-      export default {
-        methods: {
-          openNotification(position = null) {
-            const noti = this.$vs.notification({
-              position,
-              title: 'Documentation Vuesax 4.0+',
-              text: `These documents refer to the latest version of vuesax (4.0+),
-              to see the documents of the previous versions you can do it here 👉 Vuesax3.x`
-            })
-          }
-        }
-      }
-    </script>
-  ```
-
-</div>
-
-<div slot="style">
-
-  ```stylus
-    <style scoped lang="stylus">
-      .vs-button
-        margin 10px
-      i
-        margin 2px
-        font-size 1.4rem
-        transform-origin center
-        &.b-r
-          transform rotate(90deg)
-        &.t-r
-          transform rotate(0deg)
-        &.t-l
-          transform rotate(-90deg)
-        &.b-l
-          transform rotate(-180deg)
-    </style>
-  ```
-
-</div>
-
-</card>
-
-<card>
+:::tabs
+== Preview
+<Default />
+== Code
+<<< @/components/examples/default.vue{vue}
+:::
 
 ## Color
 
@@ -163,262 +48,34 @@ Allowed values   are:
 - RGB
 - HEX
 
-<div slot="example">
-  <Notification-color />
-</div>
-
-<div slot="template">
-
-  ```html{3}
-    <template>
-      <div class="center">
-        <vs-button shadow icon @click="openNotification(null, null)">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-        <vs-button flat icon @click="openNotification(null, 'primary')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-        <vs-button flat success icon @click="openNotification('top-right', 'success')">
-          <i class='bx bx-border-radius t-r'></i>
-        </vs-button>
-        <vs-button flat danger icon @click="openNotification('top-left', 'danger')">
-          <i class='bx bx-border-radius t-l'></i>
-        </vs-button>
-        <vs-button flat warn icon @click="openNotification('bottom-left', 'warn')">
-          <i class='bx bx-border-radius b-l'></i>
-        </vs-button>
-        <vs-button flat dark icon @click="openNotification('bottom-center', 'dark')">
-          <i class='bx bx-border-bottom' ></i>
-        </vs-button>
-        <vs-button flat color="#7d33ff" icon @click="openNotification('top-center', '#7d33ff')">
-          <i class='bx bx-border-top' ></i>
-        </vs-button>
-        <vs-button flat color="rgb(59,222,200)" icon @click="openNotification(null, 'rgb(59,222,200)')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-      </div>
-    </template>
-  ```
-
-</div>
-
-<div slot="script">
-
-  ```html{4,5,6,7,8,9,10,11}
-    <script>
-      export default {
-        methods: {
-          openNotification(position = null, color) {
-            const noti = this.$vs.notification({
-              color,
-              position,
-              title: 'Documentation Vuesax 4.0+',
-              text: 'These documents refer to the latest version of vuesax (4.0+), to see the documents of the previous versions you can do it here 👉 Vuesax 3.x'
-            })
-          }
-        }
-      }
-    </script>
-  ```
-
-</div>
-
-</card>
-
-<card>
+:::tabs
+== Preview
+<Default />
+== Code
+<<< @/components/examples/default.vue{vue}
+:::
 
 ## Icons
 
 Add the icon provided as the value of the `icon` property to the notification
 
-<div slot="example">
-  <Notification-icons />
-</div>
+:::tabs
+== Preview
+<Default />
+== Code
+<<< @/components/examples/default.vue{vue}
+:::
 
-<div slot="template">
-
-  ```html{3}
-    <template>
-      <div class="center">
-        <vs-button shadow icon @click="openNotification(null, null, `<i class='bx bxs-time'></i>`)">
-          <i class='bx bx-border-radius b-r'></i> <i class='bx bxs-time'></i>
-        </vs-button>
-        <vs-button flat icon
-          @click="openNotification(null, 'primary', `<i class='bx bxs-user-pin' ></i>`)">
-          <i class='bx bx-border-radius b-r'></i> <i class='bx bxs-user-pin' ></i>
-        </vs-button>
-        <vs-button flat success icon
-          @click="openNotification('top-right', 'success', `<i class='bx bx-select-multiple' ></i>`)">
-          <i class='bx bx-border-radius t-r'></i> <i class='bx bx-select-multiple' ></i>
-        </vs-button>
-        <vs-button flat danger icon
-          @click="openNotification('top-left', 'danger', `<i class='bx bxs-bug' ></i>`)">
-          <i class='bx bx-border-radius t-l'></i> <i class='bx bxs-bug' ></i>
-        </vs-button>
-        <vs-button flat warn icon
-          @click="openNotification('bottom-left', 'warn', `<i class='bx bx-error' ></i>`)">
-          <i class='bx bx-border-radius b-l'></i> <i class='bx bx-error' ></i>
-        </vs-button>
-        <vs-button flat dark icon
-          @click="openNotification('bottom-center', 'dark', `<i class='bx bx-folder-open' ></i>`)">
-          <i class='bx bx-border-bottom' ></i> <i class='bx bx-folder-open' ></i>
-        </vs-button>
-        <vs-button flat color="#7d33ff" icon
-          @click="openNotification('top-center', '#7d33ff', `<i class='bx bx-bell' ></i>`)">
-          <i class='bx bx-border-top' ></i> <i class='bx bx-bell' ></i>
-        </vs-button>
-        <vs-button flat color="rgb(59,222,200)" icon
-          @click="openNotification(null, 'rgb(59,222,200)', `<i class='bx bx-calendar' ></i>`)">
-          <i class='bx bx-border-radius b-r'></i> <i class='bx bx-calendar' ></i>
-        </vs-button>
-      </div>
-    </template>
-  ```
-
-</div>
-
-<div slot="script">
-
-  ```html{4,5,6,7,8,9,10,11,12}
-    <script>
-      export default {
-        methods: {
-          openNotification(position = null, color, icon) {
-            const noti = this.$vs.notification({
-              icon,
-              color,
-              position,
-              title: 'Documentation Vuesax 4.0+',
-              text: `These documents refer to the latest version of vuesax (4.0+),
-              to see the documents of the previous versions you can do it here 👉 Vuesax3.x`
-            })
-          }
-        }
-      }
-    </script>
-  ```
-
-</div>
-
-<div slot="style">
-
-  ```stylus
-    <style scoped lang="stylus">
-      .vs-button
-        margin 10px
-      i
-        margin 2px
-        font-size 1.2rem
-        transform-origin center
-        &.b-r
-          transform rotate(90deg)
-        &.t-r
-          transform rotate(0deg)
-        &.t-l
-          transform rotate(-90deg)
-        &.b-l
-          transform rotate(-180deg)
-    </style>
-  ```
-
-</div>
-
-</card>
-
-<card>
-
-## Progress <Badge text="New"/>
+## Progress
 
 Add a progress bar to the notification, if the value of the `progress` property is `auto` be determined by the `duration` property to reach 100%, if you want the value to be manual you can add a number of the (0 - 100) being 100 100% and use the function in the `changeProgress` instance and change the value to the one provided as the first parameter
 
-<div slot="example">
-  <Notification-progress />
-</div>
-
-<div slot="template">
-
-  ```html{4}
-    <template>
-      <div class="center">
-        <vs-button shadow icon @click="openNotification(null, '')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-        <vs-button flat icon @click="openNotification(null, 'primary')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-        <vs-button flat success icon @click="openNotification('top-right', 'success')">
-          <i class='bx bx-border-radius t-r'></i>
-        </vs-button>
-        <vs-button flat danger icon @click="openNotification('top-left', 'danger')">
-          <i class='bx bx-border-radius t-l'></i>
-        </vs-button>
-        <vs-button flat warn icon @click="openNotification('bottom-left', 'warn')">
-          <i class='bx bx-border-radius b-l'></i>
-        </vs-button>
-        <vs-button flat dark icon @click="openNotification('bottom-center', 'dark')">
-          <i class='bx bx-border-bottom' ></i>
-        </vs-button>
-        <vs-button flat color="#7d33ff" icon
-          @click="openNotification('top-center', '#7d33ff')">
-          <i class='bx bx-border-top' ></i>
-        </vs-button>
-        <vs-button flat color="rgb(59,222,200)" icon
-          @click="openNotification(null, 'rgb(59,222,200)')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-      </div>
-    </template>
-  ```
-
-</div>
-
-<div slot="script">
-
-  ```html{4,5,6,7,8,9,10,11,12}
-    <script>
-      export default {
-        methods: {
-          openNotification(position = null, color) {
-            const noti = this.$vs.notification({
-              progress: 'auto',
-              color,
-              position,
-              title: 'Documentation Vuesax 4.0+',
-              text: `These documents refer to the latest version of vuesax (4.0+),
-              to see the documents of the previous versions you can do it here 👉 Vuesax3.x`
-            })
-          }
-        }
-      }
-    </script>
-  ```
-
-</div>
-
-<div slot="stylus">
-
-  ```stylus
-    <style scoped lang="stylus">
-      .vs-button
-        margin 10px
-      i
-        margin 2px
-        font-size 1.2rem
-        transform-origin center
-        &.b-r
-          transform rotate(90deg)
-        &.t-r
-          transform rotate(0deg)
-        &.t-l
-          transform rotate(-90deg)
-        &.b-l
-          transform rotate(-180deg)
-    </style>
-  ```
-
-</div>
-
-</card>
+:::tabs
+== Preview
+<Default />
+== Code
+<<< @/components/examples/default.vue{vue}
+:::
 
 <card>
 
@@ -772,101 +429,6 @@ Change the style of the notification with the `flat` property, having this prope
           openNotification(position = null, color) {
             const noti = this.$vs.notification({
               flat: true,
-              color,
-              position,
-              title: 'Documentation Vuesax 4.0+',
-              text: `These documents refer to the latest version of vuesax (4.0+),
-              to see the documents of the previous versions you can do it here 👉 Vuesax3.x`
-            })
-          }
-        }
-      }
-    </script>
-  ```
-
-</div>
-
-<div slot="stylus">
-
-  ```stylus
-    <style scoped lang="stylus">
-      .vs-button
-        margin 10px
-      i
-        margin 2px
-        font-size 1.2rem
-        transform-origin center
-        &.b-r
-          transform rotate(90deg)
-        &.t-r
-          transform rotate(0deg)
-        &.t-l
-          transform rotate(-90deg)
-        &.b-l
-          transform rotate(-180deg)
-    </style>
-  ```
-
-</div>
-
-</card>
-
-<card>
-
-## Loading <Badge text="New"/>
-
-Add a loading animation to the notification, having this property will only show the animation and the content will be hidden
-
-<div slot="example">
-  <Notification-loading />
-</div>
-
-<div slot="template">
-
-  ```html{3}
-    <template>
-      <div class="center">
-        <vs-button shadow icon @click="openNotification(null, '')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-        <vs-button gradient icon @click="openNotification(null, 'primary')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-        <vs-button gradient success icon @click="openNotification('top-right', 'success')">
-          <i class='bx bx-border-radius t-r'></i>
-        </vs-button>
-        <vs-button gradient danger icon @click="openNotification('top-left', 'danger')">
-          <i class='bx bx-border-radius t-l'></i>
-        </vs-button>
-        <vs-button gradient warn icon @click="openNotification('bottom-left', 'warn')">
-          <i class='bx bx-border-radius b-l'></i>
-        </vs-button>
-        <vs-button gradient dark icon @click="openNotification('bottom-center', 'dark')">
-          <i class='bx bx-border-bottom' ></i>
-        </vs-button>
-        <vs-button gradient color="#7d33ff" icon
-          @click="openNotification('top-center', '#7d33ff')">
-          <i class='bx bx-border-top' ></i>
-        </vs-button>
-        <vs-button gradient color="rgb(59,222,200)" icon
-          @click="openNotification(null, 'rgb(59,222,200)')">
-          <i class='bx bx-border-radius b-r'></i>
-        </vs-button>
-      </div>
-    </template>
-  ```
-
-</div>
-
-<div slot="script">
-
-  ```html{4-12}
-    <script>
-      export default {
-        methods: {
-          openNotification(position = null, color) {
-            const noti = this.$vs.notification({
-              loading: true,
               color,
               position,
               title: 'Documentation Vuesax 4.0+',

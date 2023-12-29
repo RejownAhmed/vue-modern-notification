@@ -1,21 +1,37 @@
 {
-  "hash": "b801ec57",
+  "hash": "4b802a9c",
   "configHash": "78bc768a",
-  "lockfileHash": "ab3a0758",
-  "browserHash": "55322e28",
+  "lockfileHash": "004d7b98",
+  "browserHash": "8e86f936",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "f7cfa0ee",
+      "fileHash": "077ed47b",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/lib/esm/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "266f2693",
+      "fileHash": "a2517efb",
+      "needsInterop": false
+    },
+    "vitepress-plugin-tabs/client": {
+      "src": "../../../../node_modules/vitepress-plugin-tabs/src/client/index.ts",
+      "file": "vitepress-plugin-tabs_client.js",
+      "fileHash": "07e2c041",
+      "needsInterop": false
+    },
+    "vue-modern-notification": {
+      "src": "../../../../node_modules/vue-modern-notification/dist/vue-modern-notification.js",
+      "file": "vue-modern-notification.js",
+      "fileHash": "ac6b57d7",
       "needsInterop": false
     }
   },
-  "chunks": {}
+  "chunks": {
+    "chunk-ZBR2ML67": {
+      "file": "chunk-ZBR2ML67.js"
+    }
+  }
 }
