@@ -1,5 +1,8 @@
 <script setup>
 import Default from "../components/examples/default.vue";
+import Position from "../components/examples/position.vue";
+import Color from "../components/examples/color.vue";
+import Icons from "../components/examples/icons.vue";
 
 </script>
 
@@ -29,9 +32,9 @@ supported values
 
 :::tabs
 == Preview
-<Default />
+<Position />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/position.vue{vue}
 :::
 
 ## Color
@@ -40,19 +43,20 @@ Use the color property to change the base color of the component and some of the
 
 Allowed values   are:
 
-- primary
-- success
-- danger
-- warning
-- dark
-- RGB
-- HEX
+- `primary`
+- `secondary`
+- `success`
+- `warning`
+- `danger`
+- `dark`
+- `info`
+- `light`
 
 :::tabs
 == Preview
-<Default />
+<Color />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/color.vue{vue}
 :::
 
 ## Icons
@@ -61,9 +65,9 @@ Add the icon provided as the value of the `icon` property to the notification
 
 :::tabs
 == Preview
-<Default />
+<Icons />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/icons.vue{vue}
 :::
 
 ## Progress

@@ -15,6 +15,9 @@ export default {
         success: 'rgb(var(--color-success) / <alpha-value>)',
         warning: 'rgb(var(--color-warning) / <alpha-value>)',
         danger: 'rgb(var(--color-danger) / <alpha-value>)',
+        dark: 'rgb(var(--color-dark) / <alpha-value>)',
+        light: 'rgb(var(--color-light) / <alpha-value>)',
+        info: 'rgb(var(--color-info) / <alpha-value>)',
         body: 'rgb(var(--color-body) / <alpha-value>)', // Body bg
         card: 'rgb(var(--color-card) / <alpha-value>)', // Components bg
       },

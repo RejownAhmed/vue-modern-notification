@@ -2206,7 +2206,7 @@ util-deprecate@^1.0.2:
 
 v-wave@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.npmjs.org/v-wave/-/v-wave-2.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/v-wave/-/v-wave-2.0.0.tgz#884f8ad1aa1f71a46cbe838057309acfe357e6df"
   integrity sha512-AFr1kUvSDyInqUHqR+cVtBKAr6s1w9X13abxHUUtCHvhpLYZhnjyDynJ1HqLH6sNwXxJqvGx/dh2Z2tkgu2I5w==
   dependencies:
     "@nuxt/kit" "^3.8.2"
@@ -2273,6 +2273,14 @@ vue-modern-notification@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.1.tgz#d308850714c922aa9c4a17e49bea78e3df32d181"
   integrity sha512-ONY2EfDynh1eSvJPZl08gw/V03P9SB7FRaAURR7rOk7PZCMXzxKlUmP6Bt/QLJhCLvHOFtmGhbVRGlWpTMNocg==
+
+vue-modern-notification@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.2.tgz#e0e8a3d24c92b2b5fbaf59a990d7d2ad258da152"
+  integrity sha512-JiujP+pHRS0fSvk/uA5n4LMaUSi2gUD1dWqkjoB2NYCwlLvNpvsE9isv9+TlYyozL872eEb6k0KYaLDfIU0Wcw==
+  dependencies:
+    vitepress-plugin-tabs "^0.5.0"
+    vue-modern-notification "^1.0.1"
 
 vue@^3.3.4:
   version "3.3.12"

@@ -18,7 +18,7 @@
     ]" :style="{ ...notificationStyleRootVars, width: props.width }" @click="clicked">
       <!-- icon -->
       <div class="notification__icon" v-if="props.icon">
-        <component v-if="typeof props.icon == 'object'" :is="props.icon" />
+        <component v-if="typeof props.icon !== 'string'" :is="props.icon" />
         <template v-else>
           <span v-html="props.icon" />
 
@@ -73,7 +73,6 @@ const props = defineProps({
         "warning",
         "dark",
         "light",
-        // TODO: Need to add below three colors
         "info"
       ].includes(value),
   },
@@ -90,7 +89,6 @@ const props = defineProps({
         "warning",
         "dark",
         "light",
-        // TODO: Need to add below three colors
         "info"
       ].includes(value),
   },
@@ -137,8 +135,6 @@ const notificationStyleRootVars = computed(() => {
       rootVars["--color-text"] = `var(--color-dark)`;
       rootVars["--color-background"] = `var(--color-light)`;
     }
-    // TODO: Update below code and make classes for individual border type
-    // E.g:- border--primary
     if (typeof props.border !== 'boolean') {
       rootVars["--color-border"] = `var(--color-${props.border})`;
     } else if (props.border) {

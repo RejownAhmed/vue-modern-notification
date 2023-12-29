@@ -191,6 +191,24 @@ const rippleColor = computed(() => {
     }
   }
 
+  &.btn-dark {
+    @apply text-white 
+        bg-dark;
+
+  }
+
+  &.btn-light {
+    @apply text-dark 
+        bg-light;
+
+  }
+
+  &.btn-info {
+    @apply text-white 
+        bg-info;
+
+  }
+  
   &.btn-gradient {
     &::before {
       content: "";

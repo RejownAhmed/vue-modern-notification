@@ -6,8 +6,8 @@
       :class="buttonClasses"
       :style="buttonStyles"
       :disabled="props.disabled"
-      v-wave
-    >
+      >
+      <!-- v-wave -->
       <slot />
     </button>
   </div>
@@ -189,6 +189,24 @@ const rippleColor = computed(() => {
     &:not(.btn-flat) {
       @apply hover:shadow-danger;
     }
+  }
+
+  &.btn-dark {
+    @apply text-white 
+        bg-dark;
+
+  }
+
+  &.btn-light {
+    @apply text-dark 
+        bg-light;
+
+  }
+
+  &.btn-info {
+    @apply text-white 
+        bg-info;
+
   }
 
   &.btn-gradient {
