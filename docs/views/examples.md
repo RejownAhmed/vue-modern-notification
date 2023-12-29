@@ -23,7 +23,7 @@ Change the notification position with the position property
 
 supported values
 
-- `bottom-right` <Badge type="text" text="Default"/>
+- `bottom-right`
 - `top-right`
 - `top-center`
 - `top-left`

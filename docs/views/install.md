@@ -42,6 +42,9 @@ We support default configuration setup on the fly. Check below for available opt
 - <div class="flex gap-3">Success <span class="bg-success w-[25px] h-[25px] rounded"></span></div>
 - <div class="flex gap-3">Warning <span class="bg-warning w-[25px] h-[25px] rounded"></span></div>
 - <div class="flex gap-3">Danger <span class="bg-danger w-[25px] h-[25px] rounded"></span></div>
+- <div class="flex gap-3">Dark <span class="bg-dark shadow-white w-[25px] h-[25px] rounded"></span></div>
+- <div class="flex gap-3">Info <span class="bg-info w-[25px] h-[25px] rounded"></span></div>
+- <div class="flex gap-3">Light <span class="bg-light shadow w-[25px] h-[25px] rounded"></span></div>
 
 :::warning NOTE
 Put the RGB numerical color values as an array. 
@@ -65,6 +68,13 @@ app.use(VueModernNotification, config)
 ```
 
 - ### Position
+- `bottom-right`
+- `top-right`
+- `top-center`
+- `top-left`
+- `bottom-left`
+- `bottom-center`
+
 ```javascript
 const config = {
   //...
