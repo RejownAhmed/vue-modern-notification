@@ -2269,28 +2269,7 @@ vue-demi@>=0.14.6:
   resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.6.tgz"
   integrity sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==
 
-vue-modern-notification@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.1.tgz#d308850714c922aa9c4a17e49bea78e3df32d181"
-  integrity sha512-ONY2EfDynh1eSvJPZl08gw/V03P9SB7FRaAURR7rOk7PZCMXzxKlUmP6Bt/QLJhCLvHOFtmGhbVRGlWpTMNocg==
-
-vue-modern-notification@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.2.tgz#e0e8a3d24c92b2b5fbaf59a990d7d2ad258da152"
-  integrity sha512-JiujP+pHRS0fSvk/uA5n4LMaUSi2gUD1dWqkjoB2NYCwlLvNpvsE9isv9+TlYyozL872eEb6k0KYaLDfIU0Wcw==
-  dependencies:
-    vitepress-plugin-tabs "^0.5.0"
-    vue-modern-notification "^1.0.1"
-
-vue-modern-notification@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.5.tgz#713b074b03d4cccd4da616704a9197f4095acde8"
-  integrity sha512-YkgkCTIpGXuqbUIQAM3HNN9S3n/zArCgZ3TYWwhNjl4K1zj6xYhh+EuRmtTUoq92DuE6sN5qQRWt+PIeZqwSDQ==
-  dependencies:
-    vitepress-plugin-tabs "^0.5.0"
-    vue-modern-notification "^1.0.2"
-
-vue-modern-notification@^1.0.6:
+vue-modern-notification@^1.0.5, vue-modern-notification@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.6.tgz#45e8bfe723ff5e1c52439cfe315bbd4af6bb9232"
   integrity sha512-FmQo0lN7dNPs9v+MoW9XdCGvMqVl6Stn1DD/kC+sbTQLQvf6tePVx/Dzm4SJ5Xa5BL8Z+iG7mMorkLJ1ubHFEQ==
