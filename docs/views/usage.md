@@ -15,6 +15,9 @@ Using our plugin is very simple. 😃
     <button @click="success()">Success</button>
     <button @click="warning()">Warning</button>
     <button @click="danger()">Danger</button>
+    <button @click="dark()">Dark</button>
+    <button @click="info()">Info</button>
+    <button @click="light()">Light</button>
   </div>
 </template>
 <script setup>
@@ -42,6 +45,15 @@ const warning = ()=>{
 }
 const danger = ()=>{
   toast.error({...})
+}
+const dark = ()=>{
+  toast.dark({...})
+}
+const info = ()=>{
+  toast.info({...})
+}
+const light = ()=>{
+  toast.light({...})
 }
 </script>
 ```
