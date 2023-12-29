@@ -12,7 +12,7 @@ All the available options or props that you can set while opening the notificati
 |`title`            |`optional` Required if not passing custom component |`string`| The title text of the notification|
 |`text`             |`optional` Required if not passing custom component | `string`|The main content/description of the notification|
 |`position`         |`optional`|`string`| The position where the notification will appear.<br>Available positions are:-<br> ``top-left``<br> ``top-center`` <br> ``top-right``<br> ``bottom-left``<br>``bottom-center``<br>``bottom-right``|
-|`color`            |`optional` By default the color is black and white |`string`| The color theme for the notification. Only needed when using ``notify`` helper.<br>Available colors are:-<br> ``primary``<br> ``secondary`` <br> ``success``<br> ``warning``<br>``danger``|
+|`color`            |`optional` By default the color is black and white |`string`| The color theme for the notification. Only needed when using ``notify`` helper.<br>Available colors are:-<br> ``primary``<br> ``secondary`` <br> ``success``<br> ``warning``<br>``danger``<br>``dark``<br>``info``<br>``light``|
 |`border`           | `string`|`optional`|Border color for the notification. Same as the color prop|
 |`icon`|`htmlElement` `Component`|`optional`|Icon to display in the notification|
 |`duration`         |`number` `boolean`|`optional`|Duration for which the notification is displayed. Set ``false`` to disable automatic close functionality|
