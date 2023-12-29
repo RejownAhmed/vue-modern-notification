@@ -13,7 +13,7 @@ const options = {
       danger: [242,19,93],
       dark: [30,30,30],
       light: [255,255,255],
-      info: [23,162,184],
+      info: [59,222,200],
   },
   position: 'top-right',
   duration: 4000,
