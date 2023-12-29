@@ -36,10 +36,7 @@
     "vite": "^4.4.0",
     "vite-plugin-css-injected-by-js": "^3.3.1",
     "vitepress": "^1.0.0-rc.33",
-    "vue": "^3.3.4"
-  },
-  "dependencies": {
     "vitepress-plugin-tabs": "^0.5.0",
-    "vue-modern-notification": "^1.0.6"
+    "vue": "^3.3.4"
   }
 }
