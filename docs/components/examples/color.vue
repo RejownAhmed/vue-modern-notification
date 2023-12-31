@@ -80,7 +80,7 @@ function openNotification(color, position){
     color,
     position,
     title: 'This is a modern notification plugin',
-    text: 'The idea, design and functionality all are copied from VueSax component library. Thanks to them for sharing such a library.'
+    text: 'The idea, design and functionality all are copied from 👉 VueSax component library. Thanks to them for sharing such a library.'
   });
 
   // You can also call like:-

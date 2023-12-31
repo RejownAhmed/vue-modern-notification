@@ -3,6 +3,13 @@ import Default from "../components/examples/default.vue";
 import Position from "../components/examples/position.vue";
 import Color from "../components/examples/color.vue";
 import Icons from "../components/examples/icons.vue";
+import Progress from "../components/examples/progress.vue";
+import Duration from "../components/examples/duration.vue";
+import Square from "../components/examples/square.vue";
+import Sticky from "../components/examples/sticky.vue";
+import Flat from "../components/examples/flat.vue";
+import Width from "../components/examples/width.vue";
+import Border from "../components/examples/border.vue";
 
 </script>
 
@@ -72,26 +79,30 @@ Add the icon provided as the value of the `icon` property to the notification
 
 ## Progress
 
-Add a progress bar to the notification, if the value of the `progress` property is `auto` be determined by the `duration` property to reach 100%, if you want the value to be manual you can add a number of the (0 - 100) being 100 100% and use the function in the `changeProgress` instance and change the value to the one provided as the first parameter
+To show progress bar set `showProgress` option to  `true`.
+
+:::warning
+If `duration` is set to `false` no progress will be displayed.
+:::
 
 :::tabs
 == Preview
-<Default />
+<Progress />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/progress.vue{vue}
 :::
 
 ## Duration
 
-Change the duration of the notification with the `duration` property, the value is numerical and determine the seconds before the bone component is hidden that **10s** equals **10000** as the value
+Change the duration of the notification with the `duration` property, the value is numerical and determine the seconds before the bone component is hidden that **10s** equals `10000` as the value
 
-if you need the notification to never be hidden, the duration value would be `none`
+If you need the notification to never be hidden, the duration value would be `false`
 
 :::tabs
 == Preview
-<Default />
+<Duration />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/duration.vue{vue}
 :::
 
 ## Square
@@ -101,9 +112,9 @@ Change the style of the notification with the `square` property so as not to hav
 
 :::tabs
 == Preview
-<Default />
+<Square />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/square.vue{vue}
 :::
 
 
@@ -113,9 +124,9 @@ Change the notification style with the `border` property by adding a border of t
 
 :::tabs
 == Preview
-<Default />
+<Border />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/border.vue{vue}
 :::
 
 ## Flat
@@ -124,9 +135,9 @@ Change the style of the notification with the `flat` property, having this prope
 
 :::tabs
 == Preview
-<Default />
+<Flat />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/flat.vue{vue}
 :::
 
 
@@ -138,9 +149,9 @@ If you need the notification to have an automatic size to your content you can d
 
 :::tabs
 == Preview
-<Default />
+<Width />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/width.vue{vue}
 :::
 
 ## Sticky
@@ -149,9 +160,9 @@ You can add a style to the paste component to the nearest corner with the `stick
 
 :::tabs
 == Preview
-<Default />
+<Sticky />
 == Code
-<<< @/components/examples/default.vue{vue}
+<<< @/components/examples/sticky.vue{vue}
 :::
 
 
