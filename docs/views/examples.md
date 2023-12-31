@@ -10,6 +10,7 @@ import Sticky from "../components/examples/sticky.vue";
 import Flat from "../components/examples/flat.vue";
 import Width from "../components/examples/width.vue";
 import Border from "../components/examples/border.vue";
+import NoPadding from "../components/examples/noPadding.vue";
 
 </script>
 
@@ -145,7 +146,8 @@ Change the style of the notification with the `flat` property, having this prope
 
 Change the size of the notification to the total screen with the property `width` and giving it a value of `100%`
 
-If you need the notification to have an automatic size to your content you can do it with the value `auto`
+If you need the notification to have a custom size you can do it by setting the value you need, For example:- `50%`, `100px`, `10rem` etc.
+By default the width is set automatically while opening.
 
 :::tabs
 == Preview
@@ -165,14 +167,81 @@ You can add a style to the paste component to the nearest corner with the `stick
 <<< @/components/examples/sticky.vue{vue}
 :::
 
+## No Padding
 
-## Example
+You can set `noPadding` property to `true` to set the notification padding to none. This is helpful when using a custom component inside the notification.
 
-You can do great things with this component and some others from vuesax, to add any element within the notification we have the property `content` this property can only receive an imported component and that is what it will generate within the notification
+:::tabs
+== Preview
+<NoPadding />
+== Code
+<<< @/components/examples/noPadding.vue{vue}
+:::
+
+
+## customComponent
+
+You can pass a custom component as the content of the notification box. This is really amazing, it makes our plugin unique and opens up the path to the most customizable opportunities.
 
 :::tabs
 == Preview
 <Default />
 == Code
 <<< @/components/examples/default.vue{vue}
+:::
+
+
+## Close on click inside
+
+You can set `noPadding` property to `true` to set the notification padding to none. This is helpful when using a custom component inside the notification.
+
+:::tabs
+== Preview
+<NoPadding />
+== Code
+<<< @/components/examples/noPadding.vue{vue}
+:::
+
+## Hide close button
+
+You can set `noPadding` property to `true` to set the notification padding to none. This is helpful when using a custom component inside the notification.
+
+:::tabs
+== Preview
+<NoPadding />
+== Code
+<<< @/components/examples/noPadding.vue{vue}
+:::
+
+## On click
+
+You can set `noPadding` property to `true` to set the notification padding to none. This is helpful when using a custom component inside the notification.
+
+:::tabs
+== Preview
+<NoPadding />
+== Code
+<<< @/components/examples/noPadding.vue{vue}
+:::
+
+## On close
+
+You can set `noPadding` property to `true` to set the notification padding to none. This is helpful when using a custom component inside the notification.
+
+:::tabs
+== Preview
+<NoPadding />
+== Code
+<<< @/components/examples/noPadding.vue{vue}
+:::
+
+## Handle close and progress
+
+You can set `noPadding` property to `true` to set the notification padding to none. This is helpful when using a custom component inside the notification.
+
+:::tabs
+== Preview
+<NoPadding />
+== Code
+<<< @/components/examples/noPadding.vue{vue}
 :::
