@@ -179,7 +179,7 @@ You can set `noPadding` property to `true` to set the notification padding to no
 :::
 
 
-## customComponent
+## Custom Component
 
 You can pass a custom component as the content of the notification box. This is really amazing, it makes our plugin unique and opens up the path to the most customizable opportunities.
 
