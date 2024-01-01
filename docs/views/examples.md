@@ -47,7 +47,7 @@ supported values
 
 ## Color
 
-Use the color property to change the base color of the component and some of the child components, to better understand the handling of colors and themes you can see it [here](/docs/theme/)
+Use the `color` property to change the base color of the component and some of the child components.
 
 Allowed values   are:
 
@@ -183,14 +183,17 @@ You can set `noPadding` property to `true` to set the notification padding to no
 
 You can pass a custom component as the content of the notification box. This is really amazing, it makes our plugin unique and opens up the path to the most customizable opportunities.
 
-:::tabs
+:::tip
+Documentation of this part is being written
+:::
+<!-- :::tabs
 == Preview
 <Default />
 == Code
 <<< @/components/examples/default.vue{vue}
-:::
+::: -->
 
-
+<!-- 
 ## Close on click inside
 
 You can set `noPadding` property to `true` to set the notification padding to none. This is helpful when using a custom component inside the notification.
@@ -244,4 +247,4 @@ You can set `noPadding` property to `true` to set the notification padding to no
 <NoPadding />
 == Code
 <<< @/components/examples/noPadding.vue{vue}
-:::
+::: -->

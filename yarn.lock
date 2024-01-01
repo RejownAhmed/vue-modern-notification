@@ -2561,6 +2561,11 @@ vue-demi@>=0.14.6:
   resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.6.tgz#dc706582851dc1cdc17a0054f4fec2eb6df74c92"
   integrity sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==
 
+vue-modern-notification@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/vue-modern-notification/-/vue-modern-notification-1.0.8.tgz#b433dcca73b52d141dabca76e2b20baac0092573"
+  integrity sha512-RtqB8pYIj88fJSOv8sxxc61GroUQc97jQBEgsztouFMN9zl6KYzfyIOhXtQ82lAKmjCdCJSWM3fJkPhl3hYT0g==
+
 vue@^3.3.4, vue@^3.4.0-rc.2:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.4.0.tgz#0671a2607265c16ab56041174744b6bed8ac2baa"

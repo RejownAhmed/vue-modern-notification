@@ -7,7 +7,7 @@ hero:
   text: "Vue Notification plugin"
   tagline: A modern notification/toaster plugin/package to be used in your Vue 3 projects
   image:
-    src: /logo.png
+    src: /images/ss.png
     alt: VitePress
   actions:
     - theme: brand
