@@ -40,7 +40,7 @@
       icon
       size="md"
     >
-    <Icon icon="bx:border-bottom" rotate="-180deg" width="18" height="18" />
+    <Icon icon="bx:border-bottom" width="18" height="18" />
     </Button>
   </div>
 </template>
