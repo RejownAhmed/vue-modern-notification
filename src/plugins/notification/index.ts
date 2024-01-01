@@ -1,10 +1,11 @@
 import { render, h } from "vue";
 import './icons/style.sass';
 import './style.sass';
+// @ts-ignore
 import Notification from "./Notification.vue";
-import { Colors, Configuration,  NotificationParams } from "./types.d"
+import { Colors, Configuration,  NotificationParams } from "vue-modern-notification";
 
-const options = {
+const options: Configuration = {
   colors: {
       primary: [26,92,255],
       secondary: [125,51,255],
@@ -95,13 +96,17 @@ export function notify(params: NotificationParams) {
     div.classList.add(params.classNotification);
   }
 
-  const colors = options.colors;
-
-  // Set default color variables for the notification
-  Object.keys(colors).forEach(color => {
-    // E.g:- --color-primary = 26 92 255
-    div.style.setProperty(`--color-${color}`, `${colors[color][0]} ${colors[color][1]} ${colors[color][2]}`)
-  });
+  
+  if (options.colors) {
+    const colors = options.colors;
+    // Set default color variables for the notification
+    Object.keys(colors).forEach(color => {
+      // E.g:- --color-primary = 26 92 255
+      // @ts-ignore
+      div.style.setProperty(`--color-${color}`, `${colors[color][0]} ${colors[color][1]} ${colors[color][2]}`)
+    });
+    
+  }
 
   // Create the notification instance
   const app = h(Notification, props);
@@ -121,11 +126,14 @@ export function notify(params: NotificationParams) {
     if (props.duration) {
       setTimeout(() => {
         // Call the exposed functions/properties
+        // @ts-ignore
+
         instance.exposed.close();
       }, props.duration);
     }
   }
 
+  // @ts-ignore
   return instance.exposed;
 }
 

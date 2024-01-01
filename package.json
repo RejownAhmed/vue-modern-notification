@@ -4,10 +4,17 @@
   "author": "Rejown Ahmed Zisan",
   "private": false,
   "version": "1.0.7",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RejownAhmed/vue-modern-notification"
+  },
   "files": [
     "dist"
   ],
+  "types": "./src/plugins/notification/types.d.ts",
+  "typings": "./src/plugins/notification/types.d.ts",
   "main": "./dist/vue-modern-notification.umd.cjs",
   "module": "./dist/vue-modern-notification.js",
   "exports": {
@@ -32,12 +39,13 @@
     "sass": "^1.69.5",
     "sass-loader": "^13.3.3",
     "tailwindcss": "^3.3.7",
+    "typescript": "^5.3.3",
     "v-wave": "^2.0.0",
     "vite": "^4.4.0",
+    "vite-plugin-checker": "^0.6.2",
     "vite-plugin-css-injected-by-js": "^3.3.1",
     "vitepress": "^1.0.0-rc.33",
     "vitepress-plugin-tabs": "^0.5.0",
-    "vue": "^3.3.4",
-    "vue-modern-notification": "^1.0.7"
+    "vue": "^3.3.4"
   }
 }
